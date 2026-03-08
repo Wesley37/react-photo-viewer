@@ -64,7 +64,7 @@ const PhotoViewer = () => {
       </IconButton>
       <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '20px' }}>
         {images.map((image, index) => (
-          <div key={index} style={{ margin: '15px' }}>
+          <div key={index} style={{ margin: 'auto' }}>
             <img
               src={image}
               alt={`Uploaded ${index}`}
