@@ -68,7 +68,7 @@ const PhotoViewer = () => {
             <img
               src={image}
               alt={`Uploaded ${index}`}
-              style={{ width: '240px', height: '240px', objectFit: 'cover', cursor: 'pointer' }}
+              style={{ width: '230px', height: '230px', objectFit: 'cover', cursor: 'pointer' }}
               onClick={() => openLightbox(index)}
             />
           </div>
