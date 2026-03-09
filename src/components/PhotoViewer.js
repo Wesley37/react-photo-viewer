@@ -5,7 +5,7 @@ import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 
-const PhotoViewer = () => {
+function PhotoViewer() {
   const [images, setImages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,8 +59,7 @@ const PhotoViewer = () => {
         <VisuallyHiddenInput
           type="file"
           onChange={handleFileChange}
-          multiple
-        />
+          multiple />
       </IconButton>
       <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '20px' }}>
         {images.map((image, index) => (
@@ -69,8 +68,7 @@ const PhotoViewer = () => {
               src={image}
               alt={`Uploaded ${index}`}
               style={{ width: '230px', height: '230px', objectFit: 'cover', cursor: 'pointer' }}
-              onClick={() => openLightbox(index)}
-            />
+              onClick={() => openLightbox(index)} />
           </div>
         ))}
       </div>
@@ -82,11 +80,10 @@ const PhotoViewer = () => {
           prevSrc={images[(currentIndex + images.length - 1) % images.length]}
           onCloseRequest={closeLightbox}
           onMovePrevRequest={goToPrevious}
-          onMoveNextRequest={goToNext}
-        />
+          onMoveNextRequest={goToNext} />
       )}
     </div>
   );
-};
+}
 
 export default PhotoViewer;
